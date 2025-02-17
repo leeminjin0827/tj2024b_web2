@@ -8,17 +8,17 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/day01")
+@RequestMapping("/day01/task")
 public class day01과제 {
     // 글쓰기
-    @PostMapping("/bpost")
+    @PostMapping("/board")
     public boolean bPost(){
         System.out.println("day01 bpost!!");
         return true;
     } // f end
 
     // 전체 글 조회
-    @GetMapping("/bget1")
+    @GetMapping("/board")
     public List<Map<String, String>> bGet1(){
         System.out.println("day01 bget1!!");
         List<Map<String , String > > list = new ArrayList<>();
@@ -34,7 +34,7 @@ public class day01과제 {
     } // f end
 
     // 개별 글 조회
-    @GetMapping("/bget2")
+    @GetMapping("/board/view")
     public Map<String,String> bGet2(){
         System.out.println("day01 bget2!!");
         Map<String ,String> map = new HashMap<>();
@@ -44,14 +44,14 @@ public class day01과제 {
     } // f end
 
     // 개별 글 수정
-    @PutMapping("/bput")
+    @PutMapping("/board")
     public boolean bPut(){
         System.out.println("day01 bput!!");
         return true;
     } // f end
 
     // 개별 글 삭제
-     @DeleteMapping("/bdelete")
+     @DeleteMapping("/board")
     public int bDelete(){
         System.out.println("day01 bdelete!!");
         return 1;
