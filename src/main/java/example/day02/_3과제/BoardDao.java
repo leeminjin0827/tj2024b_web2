@@ -14,10 +14,10 @@ public class BoardDao {
     private int auto_increment = 1; // bno 자동번호 역할
 
     // 글쓰기
-    public boolean bPost( @RequestBody BoardDto boardDto ){ // 매개변수 Dto
-        boardDto.setBno( auto_increment ); // dto에 bno 주입
-        list.add( boardDto ); // list에 dto 주입
-        auto_increment++; //  bno 1 증가
+    public boolean bPost(  BoardDto boardDto ){ // 매개변수 Dto
+        boardDto.setBno( auto_increment );
+        list.add( boardDto );
+        auto_increment++;
         System.out.println("BoardController.bPost");
         return true;
     } // f end
