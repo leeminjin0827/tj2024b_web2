@@ -52,4 +52,5 @@ public class RestController2 {
     // @ResponseBody
     public boolean doGet6(){ return true; } // f end // (200) application/json : true
 
+
 } // c end
