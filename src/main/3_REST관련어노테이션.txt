@@ -38,7 +38,7 @@
     공통URL              특정URL
 
     - 관례적인
-    @ReauestParam   vs  @ReauestBody    vs  @ModelAttribute(생략가능)
+    @RequestParam   vs  @RequestBody    vs  @ModelAttribute(생략가능)
     queryString         body                form-Data
 
 

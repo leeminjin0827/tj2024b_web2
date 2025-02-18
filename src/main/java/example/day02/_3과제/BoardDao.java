@@ -1,20 +1,19 @@
 package example.day02._3과제;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-@RestController
-@RequestMapping("/day02/task1/board")
-public class BoardController {
+@Component // 싱글톤 대신에 사용한다.
+public class BoardDao {
 
-    private final List<BoardDto> list = new ArrayList<>();
+    List<BoardDto> list = new ArrayList<>();
     private int auto_increment = 1; // bno 자동번호 역할
 
     // 글쓰기
-    @PostMapping("")
     public boolean bPost( @RequestBody BoardDto boardDto ){ // 매개변수 Dto
         boardDto.setBno( auto_increment ); // dto에 bno 주입
         list.add( boardDto ); // list에 dto 주입
@@ -24,14 +23,12 @@ public class BoardController {
     } // f end
 
     // 전체 글 조회
-    @GetMapping("")
     public List<BoardDto> bGet1(){
         return list;
     } // f end
 
     // 개별 글 조회
-    @GetMapping("/view")
-    public BoardDto bGet2( @RequestParam( name = "bno") int bno ){
+    public BoardDto bGet2( int bno ){
         for( int index = 0; index <= list.size() -1; index++ ) {
             BoardDto boardDto = list.get(index); // 순회하면서 하나씩 리스트안에 넣기
             if( boardDto.getBno() == bno ) { // 입력한 bno가 순회하는 dto의 bno랑 맞으면
@@ -42,10 +39,9 @@ public class BoardController {
     } // f end
 
     // 개별 글 수정
-    @PutMapping("")
-    public boolean bPut( @RequestBody BoardDto boardDto ){
+    public boolean bPut( BoardDto boardDto ){
         for ( int index = 0; index <= list.size() -1; index++ ){
-            BoardDto boardDto2 = new BoardDto();
+            BoardDto boardDto2 = list.get( index );
             if( boardDto2.getBno() == boardDto.getBno() ){
                 list.set( index , boardDto );
                 return true;
@@ -55,10 +51,9 @@ public class BoardController {
     } // f end
 
     // 개별 글 삭제
-    @DeleteMapping("")
-    public boolean bDelete( @RequestParam( name = "bno" ) int bno ){
+    public boolean bDelete( int bno ){
         for ( int index = 0; index <= list.size() -1; index++ ){
-            BoardDto boardDto2 = new BoardDto();
+            BoardDto boardDto2 = list.get( index );
             if( boardDto2.getBno() == bno ){
                 list.remove( index );
                 return true;
