@@ -26,8 +26,22 @@
         public void setXXX( 클래스명 매개변수명 ){
             this.변수명 = 매개변수명;
         }
+    4. 핵심적인 오류
+        1. Consider defining a bean of type 'XXXX' in your configuration.
+            -> : 빈 주입이 안된다 뜻 . 주입 할 빈 이 스프링 컨테이너에 없이 때문에
+        2. The dependencies of some of the beans in the application context form a
+            -> : 서로 다른 계층들이 서로 호출하면 순환참조에 오류가 발생한다.
+                Controller ---> Service
+                Service ---> Controller
+
+    * final : 필드/변수에 초기화 이후 수정 불가능한 상태 , 상수 만들때 사용되는 키워드
+        -> final 필드/변수는 수정이 불가능 하므로 초기값이 필수이다.
+        Autowired final MvcService mvcService; = X
+        이유는 Autowired 는 애초에 = new 기능을 하기 때문(인스턴스 생성)
+    * final static : 전역변수의 상수
 
 [ 정리 ] : 스프링은 IOC 이용하여 객체를 대신 생성 과 관리 하고 DI를 이용하여 객체를 주입한다.
+Description 읽는 것 중요
 
 
 
