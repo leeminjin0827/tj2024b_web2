@@ -1,9 +1,7 @@
 package example.senter.model.mapper;
 
 import example.senter.model.dto.SenterDto;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -15,6 +13,18 @@ public interface SenterMapper {
     boolean sWrite( SenterDto senterDto );
 
     // 문의전체조회 SQL
-    @Select( " select sno , stitle , scontent , suser from senter " )
+    @Select( " select * from senter " )
     List<SenterDto> sFindAll();
+
+    // 문의개별조회 SQL
+    @Select( " select * from senter where sno = #{sno} ")
+    SenterDto sView( int sno );
+
+    // 문의 수정 SQL
+    @Update( " update senter set stitle = #{stitle} , scontent = #{scontent} , suser = #{suser} where sno = #{sno} " )
+    boolean sUpdate( SenterDto senterDto );
+
+    // 문의 삭제 SQL
+    @Delete( " delete from senter where sno = #{sno} " )
+    boolean sDelete( int sno );
 } // i end
