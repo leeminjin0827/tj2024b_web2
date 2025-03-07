@@ -6,6 +6,11 @@ import { useState } from "react"
         조건2 : (전체출력) 저장된 배열내 모든 정보(이름/전화번호)를 table 또는 ol 또는 ul 로 모두 출력하시오.
         조건3 : useState 사용.
     카카오톡 제출: ip로 제출
+
+    [1] .jsx 파일 생성
+    [2]
+    [3] max.jsx 에서 생성한 컴포넌트 렌더링
+    [4] 입력 상자의 state 변수 , document.querySelector() 방식이 아닌.
 */
 const TableValue = ( {name , phone} ) => {
     return(
