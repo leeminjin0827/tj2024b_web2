@@ -61,5 +61,17 @@ const root = createRoot( document.querySelector('#root') )
 
 // day04 : 라우터
 // 위에 존재하는 import App / import css 샘플 코드 주석처리 ( App 이름 동일 )
-import App from './example/5_라우터/Example1.jsx'
+// import App from './example/5_라우터/Example1.jsx'
+// root.render( <App /> )
+
+// day06 : axios
+// import Example1 from './example/6_AXIOS/Example1'
+// root.render( <Example1 /> )
+
+// day06 : axios2
+// import Example2 from './example/6_AXIOS/Example2'
+// root.render( <Example2 /> )
+
+// day07 : App
+import App from './example/7_AXIOS2/App'
 root.render( <App /> )
