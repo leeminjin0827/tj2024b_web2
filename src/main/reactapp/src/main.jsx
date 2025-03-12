@@ -73,5 +73,9 @@ const root = createRoot( document.querySelector('#root') )
 // root.render( <Example2 /> )
 
 // day07 : App
-import App from './example/7_AXIOS2/App'
+// import App from './example/7_AXIOS2/App'
+// root.render( <App /> )
+
+// day09 : Books
+import App from './books/App'
 root.render( <App /> )

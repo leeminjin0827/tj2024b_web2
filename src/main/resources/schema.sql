@@ -34,3 +34,24 @@ CREATE TABLE student_score (
 );
 
 -- ---------------------- ------ ---------------------------------- --
+
+-- ---------------------- day09 ---------------------------------- --
+DROP TABLE if EXISTS comment;
+DROP TABLE if EXISTS books;
+create table books(
+	bno int unsigned auto_increment,
+    bname varchar(50) not null ,
+    buser varchar(20) not null ,
+    bmessage longtext not null ,
+    bpassword varchar(12) not null ,
+    constraint primary key(bno)
+);
+create table comment(
+	cno int unsigned auto_increment,
+    cmessage longtext not null ,
+    cpassword int not null ,
+    bno int unsigned ,
+    constraint primary key(cno),
+	constraint foreign key(bno) references books(bno) on update cascade on delete cascade
+);
+-- ---------------------- ------ ---------------------------------- --
