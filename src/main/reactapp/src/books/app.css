@@ -1,8 +1,8 @@
+body{ background-color: #dbe9ff;}
 *{ padding: 0px; margin: 0px; box-sizing: border-box; }
 a{ text-decoration: none; color: black; display: block;}
 h1{ margin: 50px 0px 30px ;}
 .button1{
-    padding: 20px 30px;
     font-size: 20px;
     border-radius: 20px;
     font-weight: 900;
@@ -26,6 +26,9 @@ h1{ margin: 50px 0px 30px ;}
     padding: 5px 10px;
     border-radius: 10px;
 }
+.button1 a, .button2 a ,.button3 a{
+    padding: 20px 30px;
+}
 
 #wrap{
     text-align: center; margin-top: 80px;
@@ -44,3 +47,32 @@ h1{ margin: 50px 0px 30px ;}
     margin-bottom: 15px;
     padding: 5px;
 }
+#book span{
+    padding: 20px 0px;
+}
+#book span , #book .comment{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+#book p{
+    font-size: 20px;
+}
+#book span p:not(:first-of-type){
+    margin-top: 20px;
+}
+#book .comment{
+    margin-top: 50px;
+}
+#book .comment h2 , #book .comment div{
+    border-bottom: 1px solid black;
+}
+#book .comment div{
+    padding: 10px 0px;
+}
+#book .comment div p:first-of-type{
+    font-size: 16px;
+}
+
