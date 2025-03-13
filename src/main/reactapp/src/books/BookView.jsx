@@ -14,7 +14,7 @@ export default function Book( props ){
     } , [] )
     const [ books , setBooks ] = useState('');
     const oneBook = async ( ) => {
-        const response = await axios.get(`http://localhost:8081/book0312/view?bno=${bno}`)
+        const response = await axios.get(`http://localhost:8080/book0312/view?bno=${bno}`)
         setBooks( response.data );
     } // f end
 
@@ -25,7 +25,7 @@ export default function Book( props ){
     } , [] )
     const [ reads , setReads ] = useState([]);
     const oneRead = async ( ) => {
-        const response = await axios.get(`http://localhost:8081/book0312/comment?bno=${bno}`)
+        const response = await axios.get(`http://localhost:8080/book0312/comment?bno=${bno}`)
         console.log( response.data );
         setReads( response.data );
     } // f end
