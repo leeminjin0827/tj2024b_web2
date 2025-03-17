@@ -1,2 +1,5 @@
-<Link to={`/Book?bno=${book.bno}`}>
 Link 안에 백틱을 사용하는 방법
+<Link to={`/Book?bno=${book.bno}`}>
+
+브라우저에게 다운로드 형식임을 알리는 코드
+resp.setHeader( "Content-Disposition" , "attachment;filename="+filename );
