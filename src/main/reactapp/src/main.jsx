@@ -14,6 +14,10 @@ import { createRoot } from 'react-dom/client'
 // (*) index.html에 root DOM 가져오기.
 const root = createRoot( document.querySelector('#root') )
 
+// (*)최초로 보여줄 컴포넌트 가져오기
+import App from './components/App'
+root.render( <App/> );
+
 // day01 : '컴포넌트 만들기' 렌더링
   // import 호출할컴포넌트명 from `경로/파일명(확장자)';
 // import Component1 from './example/1_동작구조/Component1.jsx';
@@ -77,5 +81,6 @@ const root = createRoot( document.querySelector('#root') )
 // root.render( <App /> )
 
 // day09 : Books
-import App from './books/App'
-root.render( <App /> )
+// import App from './books/App'
+// root.render( <App /> )
+

@@ -35,7 +35,7 @@ public class FileService {
         System.out.println( "첨부파일의 확장자 : " + multipartFile.getContentType() ); // 첨부파일의 확장자 반환
         System.out.println( "첨부파일의 용량 : " + multipartFile.getSize() ); // 첨부파일의 용량(바이트) 반환
         System.out.println( "첨부파일의 파일명 : " + multipartFile.getOriginalFilename() ); // 첨부파일의 파일명 반환
-        System.out.println( "첨부파일 여부 : " + multipartFile.isEmpty() ); // 첨푸파일이 있다 false , 없다 true 반환
+        System.out.println( "첨부파일 유(false) 무(true) :  " + multipartFile.isEmpty() ); // 첨푸파일이 있다 false , 없다 true 반환
         // (3) 업로드 할 경로 만들기. // 업로드할 기본경로 와(+) 파일명
             // (*) 동일한 파일명으로 업로드할경우 식별이 불가능하다. 해결방안 : UUID , 식별자 생성
         String uuid = UUID.randomUUID().toString(); // 임의의 UUID 규약에 따른 난수 문자열 생성
@@ -46,6 +46,7 @@ public class FileService {
         String filePath = uploadPath + fileName;
         System.out.println( filePath );
             // (*) 만일 업로드 경로( upload 폴더 )가 존재하지 않으면 폴더 생성
+            // 파일객체명.mkdirs(); : 중간경로 모두 생성
             File file2 = new File( uploadPath );
             if( !file2.exists() ){ file2.mkdir(); }
         // (4) File 클래스 : File 관련된 다양한 메소드 제공하는 클래스
