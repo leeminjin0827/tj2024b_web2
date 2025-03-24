@@ -3,3 +3,6 @@ Link 안에 백틱을 사용하는 방법
 
 브라우저에게 다운로드 형식임을 알리는 코드
 resp.setHeader( "Content-Disposition" , "attachment;filename="+filename );
+
+joy UI에서 내부의 native input 요소에 직접 props를 전달할 때 사용
+slotProps
