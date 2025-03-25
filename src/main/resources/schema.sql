@@ -1,3 +1,12 @@
+-- ---------------------- day12 ---------------------------------- --
+DROP TABLE if EXISTS day12products;
+CREATE TABLE day12products (
+    product_id INT AUTO_INCREMENT,             -- 상품 ID (자동 증가)
+    product_name VARCHAR(255) NOT NULL,        -- 상품명
+    stock_quantity INT NOT NULL,                -- 재고 수량
+    constraint primary key(product_id)
+);
+
 -- ---------------------- web ---------------------------------- --
 DROP TABLE if EXISTS member;
 CREATE TABLE member (

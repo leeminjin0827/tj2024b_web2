@@ -1,3 +1,11 @@
+-- ---------------------- day12 ---------------------------------- --
+INSERT INTO day12products (product_name, stock_quantity) VALUES
+('무선 이어폰', 25),
+('스마트워치', 12),
+('게이밍 키보드', 30),
+('기계식 마우스', 8),
+('휴대용 충전기', 15);
+
 -- ---------------------- web ---------------------------------- --
 INSERT INTO member (mid, mpwd, mname) VALUES
 ('user1', 'password123', '김철수'),
