@@ -1,3 +1,11 @@
+-- ---------------------- day14 ---------------------------------- --
+DROP TABLE if EXISTS day14users;
+CREATE TABLE day14users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL ,
+    money int unsigned default 0
+);
+
 -- ---------------------- day12 ---------------------------------- --
 DROP TABLE if EXISTS day12products;
 CREATE TABLE day12products (

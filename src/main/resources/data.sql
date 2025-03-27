@@ -1,3 +1,8 @@
+-- ---------------------- day14 ---------------------------------- --
+insert into day14users( name , money ) values
+('서장훈' , 500000),
+('강호동' , 400000);
+
 -- ---------------------- day12 ---------------------------------- --
 INSERT INTO day12products (product_name, stock_quantity) VALUES
 ('무선 이어폰', 25),
